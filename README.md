@@ -2,6 +2,88 @@
 
 for https://github.com/google/googletest
 
+## Install
+
+- cmake
+- make
+- make install
+
+```
+➜  github ✗ git clone https://github.com/google/googletest.git
+➜  github ✗ cd googletest/googletest
+➜  googletest git:(master) ✗ mkdir recommand
+➜  googletest git:(master) ✗ cd recommand 
+➜  recommand git:(master) ✗ ls
+➜  recommand git:(master) ✗ 
+➜  recommand git:(master) ✗ cmake ../
+-- The CXX compiler identification is AppleClang 7.0.2.7000181
+-- The C compiler identification is AppleClang 7.0.2.7000181
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Found PythonInterp: /usr/bin/python (found version "2.7.10") 
+-- Looking for include file pthread.h
+-- Looking for include file pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - found
+-- Found Threads: TRUE  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/sang/workspace/github/googletest/googletest/recommand
+➜  recommand git:(master) ✗ make
+Scanning dependencies of target gtest
+[ 50%] Building CXX object CMakeFiles/gtest.dir/src/gtest-all.cc.o
+Linking CXX static library libgtest.a
+[ 50%] Built target gtest
+Scanning dependencies of target gtest_main
+[100%] Building CXX object CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+Linking CXX static library libgtest_main.a
+[100%] Built target gtest_main
+➜  recommand git:(master) ✗ make install
+[ 50%] Built target gtest
+[100%] Built target gtest_main
+Install the project...
+-- Install configuration: ""
+-- Installing: /usr/local/lib/libgtest.a
+-- Installing: /usr/local/lib/libgtest_main.a
+-- Installing: /usr/local/include/gtest
+-- Up-to-date: /usr/local/include/gtest/gtest-death-test.h
+-- Up-to-date: /usr/local/include/gtest/gtest-message.h
+-- Up-to-date: /usr/local/include/gtest/gtest-param-test.h
+-- Up-to-date: /usr/local/include/gtest/gtest-param-test.h.pump
+-- Up-to-date: /usr/local/include/gtest/gtest-printers.h
+-- Up-to-date: /usr/local/include/gtest/gtest-spi.h
+-- Up-to-date: /usr/local/include/gtest/gtest-test-part.h
+-- Up-to-date: /usr/local/include/gtest/gtest-typed-test.h
+-- Up-to-date: /usr/local/include/gtest/gtest.h
+-- Up-to-date: /usr/local/include/gtest/gtest_pred_impl.h
+-- Up-to-date: /usr/local/include/gtest/gtest_prod.h
+-- Installing: /usr/local/include/gtest/internal
+-- Installing: /usr/local/include/gtest/internal/custom
+-- Up-to-date: /usr/local/include/gtest/internal/custom/gtest-port.h
+-- Up-to-date: /usr/local/include/gtest/internal/custom/gtest-printers.h
+-- Up-to-date: /usr/local/include/gtest/internal/custom/gtest.h
+-- Up-to-date: /usr/local/include/gtest/internal/gtest-death-test-internal.h
+-- Up-to-date: /usr/local/include/gtest/internal/gtest-filepath.h
+-- Up-to-date: /usr/local/include/gtest/internal/gtest-internal.h
+-- Up-to-date: /usr/local/include/gtest/internal/gtest-linked_ptr.h
+-- Up-to-date: /usr/local/include/gtest/internal/gtest-param-util-generated.h
+-- Up-to-date: /usr/local/include/gtest/internal/gtest-param-util-generated.h.pump
+-- Up-to-date: /usr/local/include/gtest/internal/gtest-param-util.h
+-- Up-to-date: /usr/local/include/gtest/internal/gtest-port-arch.h
+-- Up-to-date: /usr/local/include/gtest/internal/gtest-port.h
+-- Up-to-date: /usr/local/include/gtest/internal/gtest-string.h
+-- Up-to-date: /usr/local/include/gtest/internal/gtest-tuple.h
+-- Up-to-date: /usr/local/include/gtest/internal/gtest-tuple.h.pump
+-- Up-to-date: /usr/local/include/gtest/internal/gtest-type-util.h
+-- Up-to-date: /usr/local/include/gtest/internal/gtest-type-util.h.pump
+```
+
 ## Hello
 
 hello.cc
