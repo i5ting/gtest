@@ -1,0 +1,405 @@
+
+	    <html>
+	      <head>
+				  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	        <title>README</title>
+					
+					<link href="toc/style/github-bf51422f4bb36427d391e4b75a1daa083c2d840e.css" media="all" rel="stylesheet" type="text/css"/>
+					<link href="toc/style/github2-d731afd4f624c99a4b19ad69f3083cd6d02b81d5.css" media="all" rel="stylesheet" type="text/css"/>
+					<link href="toc/css/zTreeStyle/zTreeStyle.css" media="all" rel="stylesheet" type="text/css"/>
+			
+				  <style>
+					pre {
+					    counter-reset: line-numbering;
+					    border: solid 1px #d9d9d9;
+					    border-radius: 0;
+					    background: #fff;
+					    padding: 0;
+					    line-height: 23px;
+					    margin-bottom: 30px;
+					    white-space: pre;
+					    overflow-x: auto;
+					    word-break: inherit;
+					    word-wrap: inherit;
+					}
+
+					pre a::before {
+					  content: counter(line-numbering);
+					  counter-increment: line-numbering;
+					  padding-right: 1em; /* space after numbers */
+					  width: 25px;
+					  text-align: right;
+					  opacity: 0.7;
+					  display: inline-block;
+					  color: #aaa;
+					  background: #eee;
+					  margin-right: 16px;
+					  padding: 2px 10px;
+					  font-size: 13px;
+					  -webkit-touch-callout: none;
+					  -webkit-user-select: none;
+					  -khtml-user-select: none;
+					  -moz-user-select: none;
+					  -ms-user-select: none;
+					  user-select: none;
+					}
+
+					pre a:first-of-type::before {
+					  padding-top: 10px;
+					}
+
+					pre a:last-of-type::before {
+					  padding-bottom: 10px;
+					}
+
+					pre a:only-of-type::before {
+					  padding: 10px;
+					}
+			
+					.highlight { background-color: #ffffcc } /* RIGHT */
+					</style>
+	      </head>
+	      <body>
+				  <div>
+							<div style='width:25%;'>
+									<ul id="tree" class="ztree" style='width:100%'>
+		
+									</ul>
+							</div>
+			        <div id='readme' style='width:70%;margin-left:20%;'>
+			          	<article class='markdown-body'>
+			            	<style>.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #f0f0f0; }
+.highlight .c { color: #60a0b0; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #007020; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .cm { color: #60a0b0; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #007020 } /* Comment.Preproc */
+.highlight .c1 { color: #60a0b0; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #60a0b0; background-color: #fff0f0 } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #c65d09; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #007020; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #007020; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #007020; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #007020 } /* Keyword.Pseudo */
+.highlight .kr { color: #007020; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #902000 } /* Keyword.Type */
+.highlight .m { color: #40a070 } /* Literal.Number */
+.highlight .s { color: #4070a0 } /* Literal.String */
+.highlight .na { color: #4070a0 } /* Name.Attribute */
+.highlight .nb { color: #007020 } /* Name.Builtin */
+.highlight .nc { color: #0e84b5; font-weight: bold } /* Name.Class */
+.highlight .no { color: #60add5 } /* Name.Constant */
+.highlight .nd { color: #555555; font-weight: bold } /* Name.Decorator */
+.highlight .ni { color: #d55537; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #007020 } /* Name.Exception */
+.highlight .nf { color: #06287e } /* Name.Function */
+.highlight .nl { color: #002070; font-weight: bold } /* Name.Label */
+.highlight .nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #062873; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #bb60d5 } /* Name.Variable */
+.highlight .ow { color: #007020; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #40a070 } /* Literal.Number.Bin */
+.highlight .mf { color: #40a070 } /* Literal.Number.Float */
+.highlight .mh { color: #40a070 } /* Literal.Number.Hex */
+.highlight .mi { color: #40a070 } /* Literal.Number.Integer */
+.highlight .mo { color: #40a070 } /* Literal.Number.Oct */
+.highlight .sb { color: #4070a0 } /* Literal.String.Backtick */
+.highlight .sc { color: #4070a0 } /* Literal.String.Char */
+.highlight .sd { color: #4070a0; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #4070a0 } /* Literal.String.Double */
+.highlight .se { color: #4070a0; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #4070a0 } /* Literal.String.Heredoc */
+.highlight .si { color: #70a0d0; font-style: italic } /* Literal.String.Interpol */
+.highlight .sx { color: #c65d09 } /* Literal.String.Other */
+.highlight .sr { color: #235388 } /* Literal.String.Regex */
+.highlight .s1 { color: #4070a0 } /* Literal.String.Single */
+.highlight .ss { color: #517918 } /* Literal.String.Symbol */
+.highlight .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #bb60d5 } /* Name.Variable.Class */
+.highlight .vg { color: #bb60d5 } /* Name.Variable.Global */
+.highlight .vi { color: #bb60d5 } /* Name.Variable.Instance */
+.highlight .il { color: #40a070 } /* Literal.Number.Integer.Long */</style>
+<h1>gtest</h1>
+
+<p>for https://github.com/google/googletest</p>
+
+<h2>Install</h2>
+
+<ul>
+<li>cmake</li>
+<li>make</li>
+<li>make install</li>
+</ul>
+<div class="highlight"><pre><span class="err">➜</span><span class="w">  </span><span class="vg">github</span><span class="w"> </span><span class="err">✗</span><span class="w"> </span><span class="vg">git</span><span class="w"> </span><span class="vg">clone</span><span class="w"> </span><span class="nl">https:</span><span class="o">//</span><span class="vg">github</span><span class="o">.</span><span class="vg">com</span><span class="o">/</span><span class="vg">google</span><span class="o">/</span><span class="vg">googletest</span><span class="o">.</span><span class="vg">git</span>
+<span class="err">➜</span><span class="w">  </span><span class="vg">github</span><span class="w"> </span><span class="err">✗</span><span class="w"> </span><span class="vg">cd</span><span class="w"> </span><span class="vg">googletest</span><span class="o">/</span><span class="vg">googletest</span>
+<span class="err">➜</span><span class="w">  </span><span class="vg">googletest</span><span class="w"> </span><span class="nl">git:</span><span class="p">(</span><span class="vg">master</span><span class="p">)</span><span class="w"> </span><span class="err">✗</span><span class="w"> </span><span class="vg">mkdir</span><span class="w"> </span><span class="vg">recommand</span>
+<span class="err">➜</span><span class="w">  </span><span class="vg">googletest</span><span class="w"> </span><span class="nl">git:</span><span class="p">(</span><span class="vg">master</span><span class="p">)</span><span class="w"> </span><span class="err">✗</span><span class="w"> </span><span class="vg">cd</span><span class="w"> </span><span class="vg">recommand</span><span class="w"> </span>
+<span class="err">➜</span><span class="w">  </span><span class="vg">recommand</span><span class="w"> </span><span class="nl">git:</span><span class="p">(</span><span class="vg">master</span><span class="p">)</span><span class="w"> </span><span class="err">✗</span><span class="w"> </span><span class="vg">ls</span>
+<span class="err">➜</span><span class="w">  </span><span class="vg">recommand</span><span class="w"> </span><span class="nl">git:</span><span class="p">(</span><span class="vg">master</span><span class="p">)</span><span class="w"> </span><span class="err">✗</span><span class="w"> </span>
+<span class="err">➜</span><span class="w">  </span><span class="vg">recommand</span><span class="w"> </span><span class="nl">git:</span><span class="p">(</span><span class="vg">master</span><span class="p">)</span><span class="w"> </span><span class="err">✗</span><span class="w"> </span><span class="vg">cmake</span><span class="w"> </span><span class="o">../</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">The</span><span class="w"> </span><span class="vg">CXX</span><span class="w"> </span><span class="vg">compiler</span><span class="w"> </span><span class="vg">identification</span><span class="w"> </span><span class="vg">is</span><span class="w"> </span><span class="vg">AppleClang</span><span class="w"> </span><span class="mf">7.0.2.7000181</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">The</span><span class="w"> </span><span class="vg">C</span><span class="w"> </span><span class="vg">compiler</span><span class="w"> </span><span class="vg">identification</span><span class="w"> </span><span class="vg">is</span><span class="w"> </span><span class="vg">AppleClang</span><span class="w"> </span><span class="mf">7.0.2.7000181</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Check</span><span class="w"> </span><span class="vg">for</span><span class="w"> </span><span class="vg">working</span><span class="w"> </span><span class="vg">CXX</span><span class="w"> </span><span class="nl">compiler:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">bin</span><span class="o">/</span><span class="vg">c</span><span class="o">++</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Check</span><span class="w"> </span><span class="vg">for</span><span class="w"> </span><span class="vg">working</span><span class="w"> </span><span class="vg">CXX</span><span class="w"> </span><span class="nl">compiler:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">bin</span><span class="o">/</span><span class="vg">c</span><span class="o">++</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="vg">works</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Detecting</span><span class="w"> </span><span class="vg">CXX</span><span class="w"> </span><span class="vg">compiler</span><span class="w"> </span><span class="vg">ABI</span><span class="w"> </span><span class="vg">info</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Detecting</span><span class="w"> </span><span class="vg">CXX</span><span class="w"> </span><span class="vg">compiler</span><span class="w"> </span><span class="vg">ABI</span><span class="w"> </span><span class="vg">info</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="vg">done</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Check</span><span class="w"> </span><span class="vg">for</span><span class="w"> </span><span class="vg">working</span><span class="w"> </span><span class="vg">C</span><span class="w"> </span><span class="nl">compiler:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">bin</span><span class="o">/</span><span class="vg">cc</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Check</span><span class="w"> </span><span class="vg">for</span><span class="w"> </span><span class="vg">working</span><span class="w"> </span><span class="vg">C</span><span class="w"> </span><span class="nl">compiler:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">bin</span><span class="o">/</span><span class="vg">cc</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="vg">works</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Detecting</span><span class="w"> </span><span class="vg">C</span><span class="w"> </span><span class="vg">compiler</span><span class="w"> </span><span class="vg">ABI</span><span class="w"> </span><span class="vg">info</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Detecting</span><span class="w"> </span><span class="vg">C</span><span class="w"> </span><span class="vg">compiler</span><span class="w"> </span><span class="vg">ABI</span><span class="w"> </span><span class="vg">info</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="vg">done</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Found</span><span class="w"> </span><span class="nl">PythonInterp:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">bin</span><span class="o">/</span><span class="vg">python</span><span class="w"> </span><span class="p">(</span><span class="vg">found</span><span class="w"> </span><span class="vg">version</span><span class="w"> </span><span class="s2">&quot;2.7.10&quot;</span><span class="p">)</span><span class="w"> </span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Looking</span><span class="w"> </span><span class="vg">for</span><span class="w"> </span><span class="vg">include</span><span class="w"> </span><span class="vg">file</span><span class="w"> </span><span class="vg">pthread</span><span class="o">.</span><span class="vg">h</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Looking</span><span class="w"> </span><span class="vg">for</span><span class="w"> </span><span class="vg">include</span><span class="w"> </span><span class="vg">file</span><span class="w"> </span><span class="vg">pthread</span><span class="o">.</span><span class="vg">h</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="vg">found</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Looking</span><span class="w"> </span><span class="vg">for</span><span class="w"> </span><span class="vg">pthread_create</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Looking</span><span class="w"> </span><span class="vg">for</span><span class="w"> </span><span class="vg">pthread_create</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="vg">found</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Found</span><span class="w"> </span><span class="nl">Threads:</span><span class="w"> </span><span class="vg">TRUE</span><span class="w">  </span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Configuring</span><span class="w"> </span><span class="vg">done</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Generating</span><span class="w"> </span><span class="vg">done</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Build</span><span class="w"> </span><span class="vg">files</span><span class="w"> </span><span class="vg">have</span><span class="w"> </span><span class="vg">been</span><span class="w"> </span><span class="vg">written</span><span class="w"> </span><span class="nl">to:</span><span class="w"> </span><span class="o">/</span><span class="vg">Users</span><span class="o">/</span><span class="vg">sang</span><span class="o">/</span><span class="vg">workspace</span><span class="o">/</span><span class="vg">github</span><span class="o">/</span><span class="vg">googletest</span><span class="o">/</span><span class="vg">googletest</span><span class="o">/</span><span class="vg">recommand</span>
+<span class="err">➜</span><span class="w">  </span><span class="vg">recommand</span><span class="w"> </span><span class="nl">git:</span><span class="p">(</span><span class="vg">master</span><span class="p">)</span><span class="w"> </span><span class="err">✗</span><span class="w"> </span><span class="vg">make</span>
+<span class="vg">Scanning</span><span class="w"> </span><span class="vg">dependencies</span><span class="w"> </span><span class="vg">of</span><span class="w"> </span><span class="vg">target</span><span class="w"> </span><span class="vg">gtest</span>
+<span class="p">[</span><span class="w"> </span><span class="il">50</span><span class="o">%</span><span class="p">]</span><span class="w"> </span><span class="vg">Building</span><span class="w"> </span><span class="vg">CXX</span><span class="w"> </span><span class="vg">object</span><span class="w"> </span><span class="vg">CMakeFiles</span><span class="o">/</span><span class="vg">gtest</span><span class="o">.</span><span class="vg">dir</span><span class="o">/</span><span class="vg">src</span><span class="o">/</span><span class="vg">gtest</span><span class="o">-</span><span class="vg">all</span><span class="o">.</span><span class="vg">cc</span><span class="o">.</span><span class="vg">o</span>
+<span class="vg">Linking</span><span class="w"> </span><span class="vg">CXX</span><span class="w"> </span><span class="vg">static</span><span class="w"> </span><span class="vg">library</span><span class="w"> </span><span class="vg">libgtest</span><span class="o">.</span><span class="vg">a</span>
+<span class="p">[</span><span class="w"> </span><span class="il">50</span><span class="o">%</span><span class="p">]</span><span class="w"> </span><span class="vg">Built</span><span class="w"> </span><span class="vg">target</span><span class="w"> </span><span class="vg">gtest</span>
+<span class="vg">Scanning</span><span class="w"> </span><span class="vg">dependencies</span><span class="w"> </span><span class="vg">of</span><span class="w"> </span><span class="vg">target</span><span class="w"> </span><span class="vg">gtest_main</span>
+<span class="p">[</span><span class="il">100</span><span class="o">%</span><span class="p">]</span><span class="w"> </span><span class="vg">Building</span><span class="w"> </span><span class="vg">CXX</span><span class="w"> </span><span class="vg">object</span><span class="w"> </span><span class="vg">CMakeFiles</span><span class="o">/</span><span class="vg">gtest_main</span><span class="o">.</span><span class="vg">dir</span><span class="o">/</span><span class="vg">src</span><span class="o">/</span><span class="vg">gtest_main</span><span class="o">.</span><span class="vg">cc</span><span class="o">.</span><span class="vg">o</span>
+<span class="vg">Linking</span><span class="w"> </span><span class="vg">CXX</span><span class="w"> </span><span class="vg">static</span><span class="w"> </span><span class="vg">library</span><span class="w"> </span><span class="vg">libgtest_main</span><span class="o">.</span><span class="vg">a</span>
+<span class="p">[</span><span class="il">100</span><span class="o">%</span><span class="p">]</span><span class="w"> </span><span class="vg">Built</span><span class="w"> </span><span class="vg">target</span><span class="w"> </span><span class="vg">gtest_main</span>
+<span class="err">➜</span><span class="w">  </span><span class="vg">recommand</span><span class="w"> </span><span class="nl">git:</span><span class="p">(</span><span class="vg">master</span><span class="p">)</span><span class="w"> </span><span class="err">✗</span><span class="w"> </span><span class="vg">make</span><span class="w"> </span><span class="vg">install</span>
+<span class="p">[</span><span class="w"> </span><span class="il">50</span><span class="o">%</span><span class="p">]</span><span class="w"> </span><span class="vg">Built</span><span class="w"> </span><span class="vg">target</span><span class="w"> </span><span class="vg">gtest</span>
+<span class="p">[</span><span class="il">100</span><span class="o">%</span><span class="p">]</span><span class="w"> </span><span class="vg">Built</span><span class="w"> </span><span class="vg">target</span><span class="w"> </span><span class="vg">gtest_main</span>
+<span class="vg">Install</span><span class="w"> </span><span class="vg">the</span><span class="w"> </span><span class="vg">project</span><span class="o">...</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Install</span><span class="w"> </span><span class="nl">configuration:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="o">--</span><span class="w"> </span><span class="nl">Installing:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">local</span><span class="o">/</span><span class="vg">lib</span><span class="o">/</span><span class="vg">libgtest</span><span class="o">.</span><span class="vg">a</span>
+<span class="o">--</span><span class="w"> </span><span class="nl">Installing:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">local</span><span class="o">/</span><span class="vg">lib</span><span class="o">/</span><span class="vg">libgtest_main</span><span class="o">.</span><span class="vg">a</span>
+<span class="o">--</span><span class="w"> </span><span class="nl">Installing:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">local</span><span class="o">/</span><span class="vg">include</span><span class="o">/</span><span class="vg">gtest</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Up</span><span class="o">-</span><span class="vg">to</span><span class="o">-</span><span class="nl">date:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">local</span><span class="o">/</span><span class="vg">include</span><span class="o">/</span><span class="vg">gtest</span><span class="o">/</span><span class="vg">gtest</span><span class="o">-</span><span class="vg">death</span><span class="o">-</span><span class="vg">test</span><span class="o">.</span><span class="vg">h</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Up</span><span class="o">-</span><span class="vg">to</span><span class="o">-</span><span class="nl">date:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">local</span><span class="o">/</span><span class="vg">include</span><span class="o">/</span><span class="vg">gtest</span><span class="o">/</span><span class="vg">gtest</span><span class="o">-</span><span class="vg">message</span><span class="o">.</span><span class="vg">h</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Up</span><span class="o">-</span><span class="vg">to</span><span class="o">-</span><span class="nl">date:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">local</span><span class="o">/</span><span class="vg">include</span><span class="o">/</span><span class="vg">gtest</span><span class="o">/</span><span class="vg">gtest</span><span class="o">-</span><span class="vg">param</span><span class="o">-</span><span class="vg">test</span><span class="o">.</span><span class="vg">h</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Up</span><span class="o">-</span><span class="vg">to</span><span class="o">-</span><span class="nl">date:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">local</span><span class="o">/</span><span class="vg">include</span><span class="o">/</span><span class="vg">gtest</span><span class="o">/</span><span class="vg">gtest</span><span class="o">-</span><span class="vg">param</span><span class="o">-</span><span class="vg">test</span><span class="o">.</span><span class="vg">h</span><span class="o">.</span><span class="vg">pump</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Up</span><span class="o">-</span><span class="vg">to</span><span class="o">-</span><span class="nl">date:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">local</span><span class="o">/</span><span class="vg">include</span><span class="o">/</span><span class="vg">gtest</span><span class="o">/</span><span class="vg">gtest</span><span class="o">-</span><span class="vg">printers</span><span class="o">.</span><span class="vg">h</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Up</span><span class="o">-</span><span class="vg">to</span><span class="o">-</span><span class="nl">date:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">local</span><span class="o">/</span><span class="vg">include</span><span class="o">/</span><span class="vg">gtest</span><span class="o">/</span><span class="vg">gtest</span><span class="o">-</span><span class="vg">spi</span><span class="o">.</span><span class="vg">h</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Up</span><span class="o">-</span><span class="vg">to</span><span class="o">-</span><span class="nl">date:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">local</span><span class="o">/</span><span class="vg">include</span><span class="o">/</span><span class="vg">gtest</span><span class="o">/</span><span class="vg">gtest</span><span class="o">-</span><span class="vg">test</span><span class="o">-</span><span class="vg">part</span><span class="o">.</span><span class="vg">h</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Up</span><span class="o">-</span><span class="vg">to</span><span class="o">-</span><span class="nl">date:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">local</span><span class="o">/</span><span class="vg">include</span><span class="o">/</span><span class="vg">gtest</span><span class="o">/</span><span class="vg">gtest</span><span class="o">-</span><span class="vg">typed</span><span class="o">-</span><span class="vg">test</span><span class="o">.</span><span class="vg">h</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Up</span><span class="o">-</span><span class="vg">to</span><span class="o">-</span><span class="nl">date:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">local</span><span class="o">/</span><span class="vg">include</span><span class="o">/</span><span class="vg">gtest</span><span class="o">/</span><span class="vg">gtest</span><span class="o">.</span><span class="vg">h</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Up</span><span class="o">-</span><span class="vg">to</span><span class="o">-</span><span class="nl">date:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">local</span><span class="o">/</span><span class="vg">include</span><span class="o">/</span><span class="vg">gtest</span><span class="o">/</span><span class="vg">gtest_pred_impl</span><span class="o">.</span><span class="vg">h</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Up</span><span class="o">-</span><span class="vg">to</span><span class="o">-</span><span class="nl">date:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">local</span><span class="o">/</span><span class="vg">include</span><span class="o">/</span><span class="vg">gtest</span><span class="o">/</span><span class="vg">gtest_prod</span><span class="o">.</span><span class="vg">h</span>
+<span class="o">--</span><span class="w"> </span><span class="nl">Installing:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">local</span><span class="o">/</span><span class="vg">include</span><span class="o">/</span><span class="vg">gtest</span><span class="o">/</span><span class="vg">internal</span>
+<span class="o">--</span><span class="w"> </span><span class="nl">Installing:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">local</span><span class="o">/</span><span class="vg">include</span><span class="o">/</span><span class="vg">gtest</span><span class="o">/</span><span class="vg">internal</span><span class="o">/</span><span class="vg">custom</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Up</span><span class="o">-</span><span class="vg">to</span><span class="o">-</span><span class="nl">date:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">local</span><span class="o">/</span><span class="vg">include</span><span class="o">/</span><span class="vg">gtest</span><span class="o">/</span><span class="vg">internal</span><span class="o">/</span><span class="vg">custom</span><span class="o">/</span><span class="vg">gtest</span><span class="o">-</span><span class="vg">port</span><span class="o">.</span><span class="vg">h</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Up</span><span class="o">-</span><span class="vg">to</span><span class="o">-</span><span class="nl">date:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">local</span><span class="o">/</span><span class="vg">include</span><span class="o">/</span><span class="vg">gtest</span><span class="o">/</span><span class="vg">internal</span><span class="o">/</span><span class="vg">custom</span><span class="o">/</span><span class="vg">gtest</span><span class="o">-</span><span class="vg">printers</span><span class="o">.</span><span class="vg">h</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Up</span><span class="o">-</span><span class="vg">to</span><span class="o">-</span><span class="nl">date:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">local</span><span class="o">/</span><span class="vg">include</span><span class="o">/</span><span class="vg">gtest</span><span class="o">/</span><span class="vg">internal</span><span class="o">/</span><span class="vg">custom</span><span class="o">/</span><span class="vg">gtest</span><span class="o">.</span><span class="vg">h</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Up</span><span class="o">-</span><span class="vg">to</span><span class="o">-</span><span class="nl">date:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">local</span><span class="o">/</span><span class="vg">include</span><span class="o">/</span><span class="vg">gtest</span><span class="o">/</span><span class="vg">internal</span><span class="o">/</span><span class="vg">gtest</span><span class="o">-</span><span class="vg">death</span><span class="o">-</span><span class="vg">test</span><span class="o">-</span><span class="vg">internal</span><span class="o">.</span><span class="vg">h</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Up</span><span class="o">-</span><span class="vg">to</span><span class="o">-</span><span class="nl">date:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">local</span><span class="o">/</span><span class="vg">include</span><span class="o">/</span><span class="vg">gtest</span><span class="o">/</span><span class="vg">internal</span><span class="o">/</span><span class="vg">gtest</span><span class="o">-</span><span class="vg">filepath</span><span class="o">.</span><span class="vg">h</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Up</span><span class="o">-</span><span class="vg">to</span><span class="o">-</span><span class="nl">date:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">local</span><span class="o">/</span><span class="vg">include</span><span class="o">/</span><span class="vg">gtest</span><span class="o">/</span><span class="vg">internal</span><span class="o">/</span><span class="vg">gtest</span><span class="o">-</span><span class="vg">internal</span><span class="o">.</span><span class="vg">h</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Up</span><span class="o">-</span><span class="vg">to</span><span class="o">-</span><span class="nl">date:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">local</span><span class="o">/</span><span class="vg">include</span><span class="o">/</span><span class="vg">gtest</span><span class="o">/</span><span class="vg">internal</span><span class="o">/</span><span class="vg">gtest</span><span class="o">-</span><span class="vg">linked_ptr</span><span class="o">.</span><span class="vg">h</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Up</span><span class="o">-</span><span class="vg">to</span><span class="o">-</span><span class="nl">date:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">local</span><span class="o">/</span><span class="vg">include</span><span class="o">/</span><span class="vg">gtest</span><span class="o">/</span><span class="vg">internal</span><span class="o">/</span><span class="vg">gtest</span><span class="o">-</span><span class="vg">param</span><span class="o">-</span><span class="vg">util</span><span class="o">-</span><span class="vg">generated</span><span class="o">.</span><span class="vg">h</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Up</span><span class="o">-</span><span class="vg">to</span><span class="o">-</span><span class="nl">date:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">local</span><span class="o">/</span><span class="vg">include</span><span class="o">/</span><span class="vg">gtest</span><span class="o">/</span><span class="vg">internal</span><span class="o">/</span><span class="vg">gtest</span><span class="o">-</span><span class="vg">param</span><span class="o">-</span><span class="vg">util</span><span class="o">-</span><span class="vg">generated</span><span class="o">.</span><span class="vg">h</span><span class="o">.</span><span class="vg">pump</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Up</span><span class="o">-</span><span class="vg">to</span><span class="o">-</span><span class="nl">date:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">local</span><span class="o">/</span><span class="vg">include</span><span class="o">/</span><span class="vg">gtest</span><span class="o">/</span><span class="vg">internal</span><span class="o">/</span><span class="vg">gtest</span><span class="o">-</span><span class="vg">param</span><span class="o">-</span><span class="vg">util</span><span class="o">.</span><span class="vg">h</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Up</span><span class="o">-</span><span class="vg">to</span><span class="o">-</span><span class="nl">date:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">local</span><span class="o">/</span><span class="vg">include</span><span class="o">/</span><span class="vg">gtest</span><span class="o">/</span><span class="vg">internal</span><span class="o">/</span><span class="vg">gtest</span><span class="o">-</span><span class="vg">port</span><span class="o">-</span><span class="vg">arch</span><span class="o">.</span><span class="vg">h</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Up</span><span class="o">-</span><span class="vg">to</span><span class="o">-</span><span class="nl">date:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">local</span><span class="o">/</span><span class="vg">include</span><span class="o">/</span><span class="vg">gtest</span><span class="o">/</span><span class="vg">internal</span><span class="o">/</span><span class="vg">gtest</span><span class="o">-</span><span class="vg">port</span><span class="o">.</span><span class="vg">h</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Up</span><span class="o">-</span><span class="vg">to</span><span class="o">-</span><span class="nl">date:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">local</span><span class="o">/</span><span class="vg">include</span><span class="o">/</span><span class="vg">gtest</span><span class="o">/</span><span class="vg">internal</span><span class="o">/</span><span class="vg">gtest</span><span class="o">-</span><span class="vg">string</span><span class="o">.</span><span class="vg">h</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Up</span><span class="o">-</span><span class="vg">to</span><span class="o">-</span><span class="nl">date:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">local</span><span class="o">/</span><span class="vg">include</span><span class="o">/</span><span class="vg">gtest</span><span class="o">/</span><span class="vg">internal</span><span class="o">/</span><span class="vg">gtest</span><span class="o">-</span><span class="vg">tuple</span><span class="o">.</span><span class="vg">h</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Up</span><span class="o">-</span><span class="vg">to</span><span class="o">-</span><span class="nl">date:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">local</span><span class="o">/</span><span class="vg">include</span><span class="o">/</span><span class="vg">gtest</span><span class="o">/</span><span class="vg">internal</span><span class="o">/</span><span class="vg">gtest</span><span class="o">-</span><span class="vg">tuple</span><span class="o">.</span><span class="vg">h</span><span class="o">.</span><span class="vg">pump</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Up</span><span class="o">-</span><span class="vg">to</span><span class="o">-</span><span class="nl">date:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">local</span><span class="o">/</span><span class="vg">include</span><span class="o">/</span><span class="vg">gtest</span><span class="o">/</span><span class="vg">internal</span><span class="o">/</span><span class="vg">gtest</span><span class="o">-</span><span class="vg">type</span><span class="o">-</span><span class="vg">util</span><span class="o">.</span><span class="vg">h</span>
+<span class="o">--</span><span class="w"> </span><span class="vg">Up</span><span class="o">-</span><span class="vg">to</span><span class="o">-</span><span class="nl">date:</span><span class="w"> </span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">local</span><span class="o">/</span><span class="vg">include</span><span class="o">/</span><span class="vg">gtest</span><span class="o">/</span><span class="vg">internal</span><span class="o">/</span><span class="vg">gtest</span><span class="o">-</span><span class="vg">type</span><span class="o">-</span><span class="vg">util</span><span class="o">.</span><span class="vg">h</span><span class="o">.</span><span class="vg">pump</span>
+</pre></div>
+<h2>Hello</h2>
+
+<p>hello.cc</p>
+<div class="highlight"><pre><span class="w">  </span><span class="err">#</span><span class="vg">include</span><span class="w"> </span><span class="o">&lt;</span><span class="vg">stdio</span><span class="o">.</span><span class="vg">h</span><span class="o">&gt;</span>
+
+<span class="w">  </span><span class="err">#</span><span class="vg">include</span><span class="w"> </span><span class="s2">&quot;gtest/gtest.h&quot;</span>
+
+<span class="w">  </span><span class="vg">TEST</span><span class="p">(</span><span class="vg">A</span><span class="p">,</span><span class="w"> </span><span class="vg">Zero</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="vg">EXPECT_EQ</span><span class="p">(</span><span class="il">1</span><span class="p">,</span><span class="w"> </span><span class="il">1</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="vg">GTEST_API_</span><span class="w"> </span><span class="vg">int</span><span class="w"> </span><span class="vg">main</span><span class="p">(</span><span class="vg">int</span><span class="w"> </span><span class="vg">argc</span><span class="p">,</span><span class="w"> </span><span class="vg">char</span><span class="w"> </span><span class="o">**</span><span class="vg">argv</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="vg">printf</span><span class="p">(</span><span class="s2">&quot;Running main() from gtest_main.cc\n&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="nl">testing:</span><span class="o">:</span><span class="vg">InitGoogleTest</span><span class="p">(</span><span class="o">&amp;</span><span class="vg">argc</span><span class="p">,</span><span class="w"> </span><span class="vg">argv</span><span class="p">);</span>
+<span class="w">    </span><span class="vg">return</span><span class="w"> </span><span class="vg">RUN_ALL_TESTS</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
+</pre></div>
+<p>compile</p>
+<div class="highlight"><pre><span class="nv">$ </span>g++  -c hello.cc  
+<span class="nv">$ </span>g++  hello.o /usr/local/lib/libgtest.a  -lpthread -o hello <span class="o">&amp;&amp;</span> ./hello
+Running main<span class="o">()</span> from gtest_main.cc
+<span class="o">[==========]</span> Running <span class="m">1</span> <span class="nb">test </span>from <span class="m">1</span> <span class="nb">test </span><span class="k">case</span>.
+<span class="o">[</span>----------<span class="o">]</span> Global <span class="nb">test </span>environment <span class="nb">set</span>-up.
+<span class="o">[</span>----------<span class="o">]</span> <span class="m">1</span> <span class="nb">test </span>from A
+<span class="o">[</span> RUN      <span class="o">]</span> A.Zero
+<span class="o">[</span>       OK <span class="o">]</span> A.Zero <span class="o">(</span><span class="m">0</span> ms<span class="o">)</span>
+<span class="o">[</span>----------<span class="o">]</span> <span class="m">1</span> <span class="nb">test </span>from A <span class="o">(</span><span class="m">0</span> ms total<span class="o">)</span>
+
+<span class="o">[</span>----------<span class="o">]</span> Global <span class="nb">test </span>environment tear-down
+<span class="o">[==========]</span> <span class="m">1</span> <span class="nb">test </span>from <span class="m">1</span> <span class="nb">test </span><span class="k">case</span> ran. <span class="o">(</span><span class="m">0</span> ms total<span class="o">)</span>
+<span class="o">[</span>  PASSED  <span class="o">]</span> <span class="m">1</span> test.
+</pre></div>
+<h2>Sample1</h2>
+
+<ul>
+<li>main.cc is main entry</li>
+<li>sample1_unittest is test</li>
+<li>sample1.h &amp;&amp; sample1.cc is source</li>
+</ul>
+
+<p>compile main</p>
+<div class="highlight"><pre><span class="nv">$ </span>g++ -c main.cc -v
+</pre></div>
+<p>compile source</p>
+<div class="highlight"><pre><span class="nv">$ </span>g++ -c sample1.cc -v
+</pre></div>
+<p>compile test</p>
+<div class="highlight"><pre><span class="nv">$ </span>g++ -c sample1_unittest.cc -v
+</pre></div>
+<p>run</p>
+<div class="highlight"><pre><span class="nv">$ </span>g++ main.o sample1.o sample1_unittest.o /usr/local/lib/libgtest.a -lpthread -o sample1 <span class="o">&amp;&amp;</span> ./sample1
+Running main<span class="o">()</span> from gtest_main.cc
+<span class="o">[==========]</span> Running <span class="m">6</span> tests from <span class="m">2</span> <span class="nb">test </span>cases.
+<span class="o">[</span>----------<span class="o">]</span> Global <span class="nb">test </span>environment <span class="nb">set</span>-up.
+<span class="o">[</span>----------<span class="o">]</span> <span class="m">3</span> tests from FactorialTest
+<span class="o">[</span> RUN      <span class="o">]</span> FactorialTest.Negative
+<span class="o">[</span>       OK <span class="o">]</span> FactorialTest.Negative <span class="o">(</span><span class="m">0</span> ms<span class="o">)</span>
+<span class="o">[</span> RUN      <span class="o">]</span> FactorialTest.Zero
+<span class="o">[</span>       OK <span class="o">]</span> FactorialTest.Zero <span class="o">(</span><span class="m">0</span> ms<span class="o">)</span>
+<span class="o">[</span> RUN      <span class="o">]</span> FactorialTest.Positive
+<span class="o">[</span>       OK <span class="o">]</span> FactorialTest.Positive <span class="o">(</span><span class="m">0</span> ms<span class="o">)</span>
+<span class="o">[</span>----------<span class="o">]</span> <span class="m">3</span> tests from FactorialTest <span class="o">(</span><span class="m">0</span> ms total<span class="o">)</span>
+
+<span class="o">[</span>----------<span class="o">]</span> <span class="m">3</span> tests from IsPrimeTest
+<span class="o">[</span> RUN      <span class="o">]</span> IsPrimeTest.Negative
+<span class="o">[</span>       OK <span class="o">]</span> IsPrimeTest.Negative <span class="o">(</span><span class="m">0</span> ms<span class="o">)</span>
+<span class="o">[</span> RUN      <span class="o">]</span> IsPrimeTest.Trivial
+<span class="o">[</span>       OK <span class="o">]</span> IsPrimeTest.Trivial <span class="o">(</span><span class="m">0</span> ms<span class="o">)</span>
+<span class="o">[</span> RUN      <span class="o">]</span> IsPrimeTest.Positive
+<span class="o">[</span>       OK <span class="o">]</span> IsPrimeTest.Positive <span class="o">(</span><span class="m">0</span> ms<span class="o">)</span>
+<span class="o">[</span>----------<span class="o">]</span> <span class="m">3</span> tests from IsPrimeTest <span class="o">(</span><span class="m">0</span> ms total<span class="o">)</span>
+
+<span class="o">[</span>----------<span class="o">]</span> Global <span class="nb">test </span>environment tear-down
+<span class="o">[==========]</span> <span class="m">6</span> tests from <span class="m">2</span> <span class="nb">test </span>cases ran. <span class="o">(</span><span class="m">1</span> ms total<span class="o">)</span>
+<span class="o">[</span>  PASSED  <span class="o">]</span> <span class="m">6</span> tests.
+</pre></div>
+<h2>Recommend</h2>
+
+<p>change directory</p>
+<div class="highlight"><pre><span class="nv">$ </span><span class="nb">cd </span>recommend
+</pre></div>
+<p>compile source &amp;&amp; test</p>
+<div class="highlight"><pre><span class="nv">$ </span>g++ -c sample1.cc sample1_unittest.cc 
+</pre></div>
+<p>run test</p>
+<div class="highlight"><pre><span class="nv">$ </span>g++ -I ./include/ sample1.o sample1_unittest.o libgtest.a libgtest_main.a -lpthread -o sample1 <span class="o">&amp;&amp;</span> ./sample1
+Running main<span class="o">()</span> from gtest_main.cc
+<span class="o">[==========]</span> Running <span class="m">6</span> tests from <span class="m">2</span> <span class="nb">test </span>cases.
+<span class="o">[</span>----------<span class="o">]</span> Global <span class="nb">test </span>environment <span class="nb">set</span>-up.
+<span class="o">[</span>----------<span class="o">]</span> <span class="m">3</span> tests from FactorialTest
+<span class="o">[</span> RUN      <span class="o">]</span> FactorialTest.Negative
+<span class="o">[</span>       OK <span class="o">]</span> FactorialTest.Negative <span class="o">(</span><span class="m">0</span> ms<span class="o">)</span>
+<span class="o">[</span> RUN      <span class="o">]</span> FactorialTest.Zero
+<span class="o">[</span>       OK <span class="o">]</span> FactorialTest.Zero <span class="o">(</span><span class="m">0</span> ms<span class="o">)</span>
+<span class="o">[</span> RUN      <span class="o">]</span> FactorialTest.Positive
+<span class="o">[</span>       OK <span class="o">]</span> FactorialTest.Positive <span class="o">(</span><span class="m">0</span> ms<span class="o">)</span>
+<span class="o">[</span>----------<span class="o">]</span> <span class="m">3</span> tests from FactorialTest <span class="o">(</span><span class="m">1</span> ms total<span class="o">)</span>
+
+<span class="o">[</span>----------<span class="o">]</span> <span class="m">3</span> tests from IsPrimeTest
+<span class="o">[</span> RUN      <span class="o">]</span> IsPrimeTest.Negative
+<span class="o">[</span>       OK <span class="o">]</span> IsPrimeTest.Negative <span class="o">(</span><span class="m">0</span> ms<span class="o">)</span>
+<span class="o">[</span> RUN      <span class="o">]</span> IsPrimeTest.Trivial
+<span class="o">[</span>       OK <span class="o">]</span> IsPrimeTest.Trivial <span class="o">(</span><span class="m">0</span> ms<span class="o">)</span>
+<span class="o">[</span> RUN      <span class="o">]</span> IsPrimeTest.Positive
+<span class="o">[</span>       OK <span class="o">]</span> IsPrimeTest.Positive <span class="o">(</span><span class="m">0</span> ms<span class="o">)</span>
+<span class="o">[</span>----------<span class="o">]</span> <span class="m">3</span> tests from IsPrimeTest <span class="o">(</span><span class="m">0</span> ms total<span class="o">)</span>
+
+<span class="o">[</span>----------<span class="o">]</span> Global <span class="nb">test </span>environment tear-down
+<span class="o">[==========]</span> <span class="m">6</span> tests from <span class="m">2</span> <span class="nb">test </span>cases ran. <span class="o">(</span><span class="m">1</span> ms total<span class="o">)</span>
+<span class="o">[</span>  PASSED  <span class="o">]</span> <span class="m">6</span> tests.
+</pre></div>
+<h2>Other</h2>
+
+<ul>
+<li>https://github.com/google/googletest/blob/master/googletest/docs/Primer.md</li>
+<li>https://github.com/google/googletest/tree/master/googletest/docs</li>
+<li>https://github.com/google/googletest/tree/master/googletest/samples</li>
+<li>https://github.com/google/googletest/blob/master/googletest/docs/Primer.md#assertions</li>
+</ul>
+<div class="highlight"><pre><span class="vg">TEST</span><span class="p">(</span><span class="vg">test_case_name</span><span class="p">,</span><span class="w"> </span><span class="vg">test_name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w"> </span><span class="o">...</span><span class="w"> </span><span class="vg">test</span><span class="w"> </span><span class="vg">body</span><span class="w"> </span><span class="o">...</span>
+<span class="p">}</span>
+
+<span class="vg">TEST_F</span><span class="p">(</span><span class="vg">test_case_name</span><span class="p">,</span><span class="w"> </span><span class="vg">test_name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w"> </span><span class="o">...</span><span class="w"> </span><span class="vg">test</span><span class="w"> </span><span class="vg">body</span><span class="w"> </span><span class="o">...</span>
+<span class="p">}</span>
+</pre></div>
+<h2>Compile</h2>
+
+<p>include path</p>
+<div class="highlight"><pre><span class="nv">$ </span><span class="nb">echo</span> <span class="p">|</span> g++ -v -x c++ -E -  
+  Apple LLVM version 7.0.2 <span class="o">(</span>clang-700.1.81<span class="o">)</span>
+  Target: x86_64-apple-darwin14.5.0
+  Thread model: posix
+   <span class="s2">&quot;/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang&quot;</span> -cc1 -triple x86_64-apple-macosx10.10.0 -Wdeprecated-objc-isa-usage -Werror<span class="o">=</span>deprecated-objc-isa-usage -E -disable-free -disable-llvm-verifier -main-file-name - -mrelocation-model pic -pic-level <span class="m">2</span> -mthread-model posix -mdisable-fp-elim -masm-verbose -munwind-tables -target-cpu core2 -target-linker-version 253.9 -v -dwarf-column-info -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.2 -stdlib<span class="o">=</span>libc++ -fdeprecated-macro -fdebug-compilation-dir /Users/sang/workspace/github/gtest -ferror-limit <span class="m">19</span> -fmessage-length <span class="m">181</span> -stack-protector <span class="m">1</span> -mstackrealign -fblocks -fobjc-runtime<span class="o">=</span>macosx-10.10.0 -fencode-extended-block-signature -fcxx-exceptions -fexceptions -fmax-type-align<span class="o">=</span><span class="m">16</span> -fdiagnostics-show-option -fcolor-diagnostics -o - -x c++ -
+  clang -cc1 version 7.0.2 based upon LLVM 3.7.0svn default target x86_64-apple-darwin14.5.0
+  ignoring nonexistent directory <span class="s2">&quot;/usr/include/c++/v1&quot;</span>
+  <span class="c">#include &quot;...&quot; search starts here:</span>
+  <span class="c">#include &lt;...&gt; search starts here:</span>
+   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1
+   /usr/local/include
+   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.2/include
+   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
+   /usr/include
+   /System/Library/Frameworks <span class="o">(</span>framework directory<span class="o">)</span>
+   /Library/Frameworks <span class="o">(</span>framework directory<span class="o">)</span>
+  End of search list.
+  <span class="c"># 1 &quot;&lt;stdin&gt;&quot;</span>
+  <span class="c"># 1 &quot;&lt;built-in&gt;&quot; 1</span>
+  <span class="c"># 1 &quot;&lt;built-in&gt;&quot; 3</span>
+  <span class="c"># 332 &quot;&lt;built-in&gt;&quot; 3</span>
+  <span class="c"># 1 &quot;&lt;command line&gt;&quot; 1</span>
+  <span class="c"># 1 &quot;&lt;built-in&gt;&quot; 2</span>
+  <span class="c"># 1 &quot;&lt;stdin&gt;&quot; 2</span>
+</pre></div>
+<p>区分2点</p>
+
+<p>1.在编译时，引入该库的头文件目录确保通过编译。比如在/usr/local/include：</p>
+<div class="highlight"><pre><span class="vg">g</span><span class="o">++</span><span class="w"> </span><span class="o">-</span><span class="vg">I</span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">local</span><span class="o">/</span><span class="vg">include</span><span class="w"> </span><span class="o">*.</span><span class="vg">c</span><span class="w"> </span><span class="o">-</span><span class="vg">o</span><span class="w"> </span><span class="vg">a</span><span class="o">.</span><span class="vg">o</span>
+</pre></div>
+<p>2.在链接时，引入该库的二进制文件目录确保通过链接。比如你说的/usr/local/lib：</p>
+<div class="highlight"><pre><span class="vg">gcc</span><span class="w"> </span><span class="o">-</span><span class="vg">L</span><span class="o">/</span><span class="vg">usr</span><span class="o">/</span><span class="vg">local</span><span class="o">/</span><span class="vg">lib</span><span class="w"> </span><span class="vg">a</span><span class="o">.</span><span class="vg">o</span><span class="w"> </span><span class="o">-</span><span class="vg">o</span><span class="w"> </span><span class="vg">a</span><span class="o">.</span><span class="vg">out</span>
+</pre></div>
+			          	</article>
+			        </div>
+					</div>
+	      </body>
+	    </html>
+			<script type="text/javascript" src="toc/js/jquery-1.4.4.min.js"></script>
+			<script type="text/javascript" src="toc/js/jquery.ztree.all-3.5.min.js"></script>
+			<script type="text/javascript" src="toc/js/ztree_toc.js"></script>
+      <script type="text/javascript" src="toc/toc_conf.js"></script>
+      
+			<SCRIPT type="text/javascript" >
+			<!--
+			$(document).ready(function(){
+          var css_conf = eval(markdown_panel_style);
+          $('#readme').css(css_conf)
+          
+          var conf = eval(jquery_ztree_toc_opts);
+  				$('#tree').ztree_toc(conf);
+
+				
+			});
+			//-->
+			</SCRIPT>
+	  
