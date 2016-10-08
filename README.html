@@ -256,13 +256,147 @@ Running main<span class="o">()</span> from gtest_main.cc
 <li>sample1.h &amp;&amp; sample1.cc is source</li>
 </ul>
 
-<p>compile main</p>
+<h3>compile main.cc</h3>
+<div class="highlight"><pre><span class="w">  </span><span class="err">#</span><span class="vg">include</span><span class="w"> </span><span class="o">&lt;</span><span class="vg">stdio</span><span class="o">.</span><span class="vg">h</span><span class="o">&gt;</span>
+
+<span class="w">  </span><span class="err">#</span><span class="vg">include</span><span class="w"> </span><span class="s2">&quot;gtest/gtest.h&quot;</span>
+
+<span class="w">  </span><span class="vg">GTEST_API_</span><span class="w"> </span><span class="vg">int</span><span class="w"> </span><span class="vg">main</span><span class="p">(</span><span class="vg">int</span><span class="w"> </span><span class="vg">argc</span><span class="p">,</span><span class="w"> </span><span class="vg">char</span><span class="w"> </span><span class="o">**</span><span class="vg">argv</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="vg">printf</span><span class="p">(</span><span class="s2">&quot;Running main() from gtest_main.cc\n&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="nl">testing:</span><span class="o">:</span><span class="vg">InitGoogleTest</span><span class="p">(</span><span class="o">&amp;</span><span class="vg">argc</span><span class="p">,</span><span class="w"> </span><span class="vg">argv</span><span class="p">);</span>
+<span class="w">    </span><span class="vg">return</span><span class="w"> </span><span class="vg">RUN_ALL_TESTS</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
+</pre></div>
+<p>run </p>
 <div class="highlight"><pre><span class="nv">$ </span>g++ -c main.cc -v
 </pre></div>
-<p>compile source</p>
+<h3>compile source</h3>
+
+<p>sample1.h</p>
+<div class="highlight"><pre>  <span class="p">#</span><span class="n">ifndef</span> <span class="n">GTEST_SAMPLES_SAMPLE1_H_</span>
+  <span class="p">#</span><span class="n">define</span> <span class="n">GTEST_SAMPLES_SAMPLE1_H_</span>
+
+  <span class="o">//</span> <span class="n">Returns</span> <span class="n">n!</span> <span class="p">(</span><span class="n">the</span> <span class="n">factorial</span> <span class="k">of</span> <span class="n">n</span><span class="p">).</span>  <span class="k">For</span> <span class="n">negative</span> <span class="n">n</span><span class="p">,</span> <span class="n">n!</span> <span class="ow">is</span> <span class="n">defined</span> <span class="k">to</span> <span class="n">be</span> <span class="mf">1.</span>
+  <span class="n">int</span> <span class="n">Factorial</span><span class="p">(</span><span class="n">int</span> <span class="n">n</span><span class="p">)</span><span class="err">;</span>
+
+  <span class="o">//</span> <span class="n">Returns</span> <span class="k">true</span> <span class="n">iff</span> <span class="n">n</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">prime</span> <span class="n">number</span><span class="p">.</span>
+  <span class="n">bool</span> <span class="n">IsPrime</span><span class="p">(</span><span class="n">int</span> <span class="n">n</span><span class="p">)</span><span class="err">;</span>
+
+  <span class="p">#</span><span class="k">endif</span>  <span class="o">//</span> <span class="n">GTEST_SAMPLES_SAMPLE1_H_</span>
+</pre></div>
+<p>sample.cc</p>
+<div class="highlight"><pre><span class="w">  </span><span class="err">#</span><span class="vg">include</span><span class="w"> </span><span class="s2">&quot;sample1.h&quot;</span>
+
+<span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="vg">Returns</span><span class="w"> </span><span class="vg">n!</span><span class="w"> </span><span class="p">(</span><span class="vg">the</span><span class="w"> </span><span class="vg">factorial</span><span class="w"> </span><span class="vg">of</span><span class="w"> </span><span class="vg">n</span><span class="p">)</span><span class="o">.</span><span class="w">  </span><span class="vg">For</span><span class="w"> </span><span class="vg">negative</span><span class="w"> </span><span class="vg">n</span><span class="p">,</span><span class="w"> </span><span class="vg">n!</span><span class="w"> </span><span class="vg">is</span><span class="w"> </span><span class="vg">defined</span><span class="w"> </span><span class="vg">to</span><span class="w"> </span><span class="vg">be</span><span class="w"> </span><span class="il">1</span><span class="o">.</span>
+<span class="w">  </span><span class="vg">int</span><span class="w"> </span><span class="vg">Factorial</span><span class="p">(</span><span class="vg">int</span><span class="w"> </span><span class="vg">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="vg">int</span><span class="w"> </span><span class="vg">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="il">1</span><span class="p">;</span>
+<span class="w">    </span><span class="vg">for</span><span class="w"> </span><span class="p">(</span><span class="vg">int</span><span class="w"> </span><span class="vg">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="il">1</span><span class="p">;</span><span class="w"> </span><span class="vg">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="vg">n</span><span class="p">;</span><span class="w"> </span><span class="vg">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="vg">result</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="vg">i</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="vg">return</span><span class="w"> </span><span class="vg">result</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="vg">Returns</span><span class="w"> </span><span class="vg">true</span><span class="w"> </span><span class="vg">iff</span><span class="w"> </span><span class="vg">n</span><span class="w"> </span><span class="vg">is</span><span class="w"> </span><span class="vg">a</span><span class="w"> </span><span class="vg">prime</span><span class="w"> </span><span class="vg">number</span><span class="o">.</span>
+<span class="w">  </span><span class="vg">bool</span><span class="w"> </span><span class="vg">IsPrime</span><span class="p">(</span><span class="vg">int</span><span class="w"> </span><span class="vg">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="o">//</span><span class="w"> </span><span class="vg">Trivial</span><span class="w"> </span><span class="vg">case</span><span class="w"> </span><span class="il">1</span><span class="o">:</span><span class="w"> </span><span class="vg">small</span><span class="w"> </span><span class="vg">numbers</span>
+<span class="w">    </span><span class="vg">if</span><span class="w"> </span><span class="p">(</span><span class="vg">n</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="il">1</span><span class="p">)</span><span class="w"> </span><span class="vg">return</span><span class="w"> </span><span class="vg">false</span><span class="p">;</span>
+
+<span class="w">    </span><span class="o">//</span><span class="w"> </span><span class="vg">Trivial</span><span class="w"> </span><span class="vg">case</span><span class="w"> </span><span class="il">2</span><span class="o">:</span><span class="w"> </span><span class="vg">even</span><span class="w"> </span><span class="vg">numbers</span>
+<span class="w">    </span><span class="vg">if</span><span class="w"> </span><span class="p">(</span><span class="vg">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="vg">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="il">0</span><span class="p">)</span><span class="w"> </span><span class="vg">return</span><span class="w"> </span><span class="vg">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="il">2</span><span class="p">;</span>
+
+<span class="w">    </span><span class="o">//</span><span class="w"> </span><span class="vg">Now</span><span class="p">,</span><span class="w"> </span><span class="vg">we</span><span class="w"> </span><span class="vg">have</span><span class="w"> </span><span class="vg">that</span><span class="w"> </span><span class="vg">n</span><span class="w"> </span><span class="vg">is</span><span class="w"> </span><span class="vg">odd</span><span class="w"> </span><span class="vg">and</span><span class="w"> </span><span class="vg">n</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="il">3</span><span class="o">.</span>
+
+<span class="w">    </span><span class="o">//</span><span class="w"> </span><span class="vg">Try</span><span class="w"> </span><span class="vg">to</span><span class="w"> </span><span class="vg">divide</span><span class="w"> </span><span class="vg">n</span><span class="w"> </span><span class="vg">by</span><span class="w"> </span><span class="vg">every</span><span class="w"> </span><span class="vg">odd</span><span class="w"> </span><span class="vg">number</span><span class="w"> </span><span class="vg">i</span><span class="p">,</span><span class="w"> </span><span class="vg">starting</span><span class="w"> </span><span class="vg">from</span><span class="w"> </span><span class="il">3</span>
+<span class="w">    </span><span class="vg">for</span><span class="w"> </span><span class="p">(</span><span class="vg">int</span><span class="w"> </span><span class="vg">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="il">3</span><span class="p">;</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="vg">i</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="il">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="o">//</span><span class="w"> </span><span class="vg">We</span><span class="w"> </span><span class="vg">only</span><span class="w"> </span><span class="vg">have</span><span class="w"> </span><span class="vg">to</span><span class="w"> </span><span class="vg">try</span><span class="w"> </span><span class="vg">i</span><span class="w"> </span><span class="vg">up</span><span class="w"> </span><span class="vg">to</span><span class="w"> </span><span class="vg">the</span><span class="w"> </span><span class="vg">squre</span><span class="w"> </span><span class="vg">root</span><span class="w"> </span><span class="vg">of</span><span class="w"> </span><span class="vg">n</span>
+<span class="w">      </span><span class="vg">if</span><span class="w"> </span><span class="p">(</span><span class="vg">i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="vg">n</span><span class="o">/</span><span class="vg">i</span><span class="p">)</span><span class="w"> </span><span class="vg">break</span><span class="p">;</span>
+
+<span class="w">      </span><span class="o">//</span><span class="w"> </span><span class="vg">Now</span><span class="p">,</span><span class="w"> </span><span class="vg">we</span><span class="w"> </span><span class="vg">have</span><span class="w"> </span><span class="vg">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="vg">n</span><span class="o">/</span><span class="vg">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="vg">n</span><span class="o">.</span>
+<span class="w">      </span><span class="o">//</span><span class="w"> </span><span class="vg">If</span><span class="w"> </span><span class="vg">n</span><span class="w"> </span><span class="vg">is</span><span class="w"> </span><span class="vg">divisible</span><span class="w"> </span><span class="vg">by</span><span class="w"> </span><span class="vg">i</span><span class="p">,</span><span class="w"> </span><span class="vg">n</span><span class="w"> </span><span class="vg">is</span><span class="w"> </span><span class="vg">not</span><span class="w"> </span><span class="vg">prime</span><span class="o">.</span>
+<span class="w">      </span><span class="vg">if</span><span class="w"> </span><span class="p">(</span><span class="vg">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="vg">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="il">0</span><span class="p">)</span><span class="w"> </span><span class="vg">return</span><span class="w"> </span><span class="vg">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="o">//</span><span class="w"> </span><span class="vg">n</span><span class="w"> </span><span class="vg">has</span><span class="w"> </span><span class="vg">no</span><span class="w"> </span><span class="vg">integer</span><span class="w"> </span><span class="vg">factor</span><span class="w"> </span><span class="vg">in</span><span class="w"> </span><span class="vg">the</span><span class="w"> </span><span class="vg">range</span><span class="w"> </span><span class="p">(</span><span class="il">1</span><span class="p">,</span><span class="w"> </span><span class="vg">n</span><span class="p">),</span><span class="w"> </span><span class="vg">and</span><span class="w"> </span><span class="vg">thus</span><span class="w"> </span><span class="vg">is</span><span class="w"> </span><span class="vg">prime</span><span class="o">.</span>
+<span class="w">    </span><span class="vg">return</span><span class="w"> </span><span class="vg">true</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+</pre></div>
+<p>run</p>
 <div class="highlight"><pre><span class="nv">$ </span>g++ -c sample1.cc -v
 </pre></div>
-<p>compile test</p>
+<h3>compile test</h3>
+
+<p>sample1_unittest.cc</p>
+<div class="highlight"><pre>  #include <span class="nt">&lt;limits.h&gt;</span>
+  #include &quot;sample1.h&quot;
+  #include &quot;gtest/gtest.h&quot;
+
+  // Tests factorial of negative numbers.
+  TEST(FactorialTest, Negative) {
+    // This test is named &quot;Negative&quot;, and belongs to the &quot;FactorialTest&quot;
+    // test case.
+    EXPECT_EQ(1, Factorial(-5));
+    EXPECT_EQ(1, Factorial(-1));
+    EXPECT_GT(Factorial(-10), 0);
+
+    // <span class="nt">&lt;TechnicalDetails&gt;</span>
+    //
+    // EXPECT_EQ(expected, actual) is the same as
+    //
+    //   EXPECT_TRUE((expected) == (actual))
+    //
+    // except that it will print both the expected value and the actual
+    // value when the assertion fails.  This is very helpful for
+    // debugging.  Therefore in this case EXPECT_EQ is preferred.
+    //
+    // On the other hand, EXPECT_TRUE accepts any Boolean expression,
+    // and is thus more general.
+    //
+    // <span class="nt">&lt;/TechnicalDetails&gt;</span>
+  }
+
+  // Tests factorial of 0.
+  TEST(FactorialTest, Zero) {
+    EXPECT_EQ(1, Factorial(0));
+  }
+
+  // Tests factorial of positive numbers.
+  TEST(FactorialTest, Positive) {
+    EXPECT_EQ(1, Factorial(1));
+    EXPECT_EQ(2, Factorial(2));
+    EXPECT_EQ(6, Factorial(3));
+    EXPECT_EQ(40320, Factorial(8));
+  }
+
+
+  // Tests IsPrime()
+
+  // Tests negative input.
+  TEST(IsPrimeTest, Negative) {
+    // This test belongs to the IsPrimeTest test case.
+
+    EXPECT_FALSE(IsPrime(-1));
+    EXPECT_FALSE(IsPrime(-2));
+    EXPECT_FALSE(IsPrime(INT_MIN));
+  }
+
+  // Tests some trivial cases.
+  TEST(IsPrimeTest, Trivial) {
+    EXPECT_FALSE(IsPrime(0));
+    EXPECT_FALSE(IsPrime(1));
+    EXPECT_TRUE(IsPrime(2));
+    EXPECT_TRUE(IsPrime(3));
+  }
+
+  // Tests positive input.
+  TEST(IsPrimeTest, Positive) {
+    EXPECT_FALSE(IsPrime(4));
+    EXPECT_TRUE(IsPrime(5));
+    EXPECT_FALSE(IsPrime(6));
+    EXPECT_TRUE(IsPrime(23));
+  }
+</pre></div>
+<p>run</p>
 <div class="highlight"><pre><span class="nv">$ </span>g++ -c sample1_unittest.cc -v
 </pre></div>
 <p>run</p>
