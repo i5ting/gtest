@@ -35,3 +35,16 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+
+hello.o
+hello
+
+sample1_unittest.o
+sample1.o
+sample1
+
+main.o
+
+recommend/sample1_unittest.o
+recommend/sample1.o
+recommend/sample1
