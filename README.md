@@ -2,7 +2,7 @@
 
 for https://github.com/google/googletest
 
-## hello
+## Hello
 
 hello.cc
 
@@ -40,7 +40,7 @@ Running main() from gtest_main.cc
 [  PASSED  ] 1 test.
 ```
 
-## sample1
+## Sample1
 
 - main.cc is main entry
 - sample1_unittest is test
@@ -94,7 +94,7 @@ Running main() from gtest_main.cc
 [  PASSED  ] 6 tests.
 ```
 
-## recommend
+## Recommend
 
 change directory
 
@@ -138,8 +138,24 @@ Running main() from gtest_main.cc
 [  PASSED  ] 6 tests.
 ```
 
+## Other
 
-## compile option
+- https://github.com/google/googletest/blob/master/googletest/docs/Primer.md
+- https://github.com/google/googletest/tree/master/googletest/docs
+- https://github.com/google/googletest/tree/master/googletest/samples
+- https://github.com/google/googletest/blob/master/googletest/docs/Primer.md#assertions
+
+```
+TEST(test_case_name, test_name) {
+ ... test body ...
+}
+
+TEST_F(test_case_name, test_name) {
+ ... test body ...
+}
+```
+
+## Compile
 
 include path
 
@@ -169,3 +185,14 @@ $ echo | g++ -v -x c++ -E -
   # 1 "<built-in>" 2
   # 1 "<stdin>" 2
 ```
+
+区分2点
+
+1.在编译时，引入该库的头文件目录确保通过编译。比如在/usr/local/include：
+
+    g++ -I/usr/local/include *.c -o a.o
+  
+2.在链接时，引入该库的二进制文件目录确保通过链接。比如你说的/usr/local/lib：
+  
+    gcc -L/usr/local/lib a.o -o a.out
+
